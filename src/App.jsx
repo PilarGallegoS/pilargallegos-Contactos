@@ -36,7 +36,7 @@ function ToDoList() {
                 {ToDo.map((ToDo) => (
                     <ListGroup.Item id={ToDo.id} className="d-flex justify-content-between align-items-center" onMouseEnter={()=> setHoveredTaskId(ToDo.id)} onMouseLeave={() => setHoveredTaskId(null)}>
                         {ToDo.text}
-                        <button onClick={() => removeToDo(ToDo.id)} style={{visibility: hoveredTaskId === ToDo.id ? "visible" : "hidden"}} className="btn btn-secondary btn-sm border-0">x</button>
+                        <button onClick={() => removeToDo(ToDo.id)} style={{visibility: hoveredTaskId === ToDo.id ? "visible" : "hidden"}} className="btn btn-light btn-sm border-0">x</button>
                     </ListGroup.Item>
                 ))}
             </ListGroup>
