@@ -1,12 +1,22 @@
-import { Routes , Route } from "react-router";
+import React from "react";
+import NavbarComponent from "./components/NavbarComponent";
+import AgendaPage from "./pages/AgendaPage";
+import { Routes, Route } from "react-router-dom";
+import ContactPage from "./pages/ContactPage";
+import AddContactPage from "./pages/AddContactPage";
 
-import ToDoList from "./pages/ToDoList";
-import Root from "./pages/Root"
-
-export const App = () => {
-    return (
-        <>
-
-        </>
-    )
+function App() {
+  return (
+    <>
+      <NavbarComponent />
+        <Routes>
+          <Route path="/agenda" element={<AgendaPage />} />
+          <Route path="/agenda/:slug" element={<ContactPage />} />
+          <Route path="/add-contact" element={<AddContactPage />} />
+        </Routes>
+    </>
+  );
 }
+
+export default App;
+
