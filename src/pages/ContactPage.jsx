@@ -22,7 +22,7 @@ function ContactPage() {
           </li>
         ))}
       </ul>
-      <Link to="/">Volver a Agendas</Link>
+      <Link to="/agenda">Volver a Agendas</Link>
     </div>
   );
 }
