@@ -12,14 +12,14 @@ function AddContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://playground.4geeks.com/contact/agendas/newAgenda/contact", {
+    fetch(`https://playground.4geeks.com/contact/agendas/${contact.slug}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(contact),
     })
       .then((response) => response.json())
       .then(() => {
-        navigate("/"); // Regresa a la lista de agendas
+        navigate("/agenda"); 
       })
       .catch((error) => console.error("Error saving contact:", error));
   };
